@@ -1,0 +1,4 @@
+interface handler {
+    use jabratech:common/types.{response-error};
+    active-positions: func (request: active-positions-request) -> result<active-positions-response, response-error>;
+  }

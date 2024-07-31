@@ -1,0 +1,6 @@
+package jabratech:active-positions;
+
+world active-positions-handler {
+  export handler;
+  export types;
+}
