@@ -1,5 +1,6 @@
 interface types {
 
+  use jabratech:common/types.{greeks}
     /**
      * Record representing a request to get trade list
      * - code: response code for validation
@@ -9,7 +10,9 @@ interface types {
     record active-positions-response {
       code: s16,
       message: string,
-      data: list<active-position>
+      positions: list<active-position>
+      atm-risk-slide: atm-risk-slide,
+      agg-bumped-greeks: list<bumped-greeks>
     }
   
     /**
@@ -24,10 +27,37 @@ interface types {
       pairs: option<list<u8>>,
       party-a: u8,
       party-b: option<list<u8>>,
+      bump: option<f64>
     }
 
     record active-position {
-        id: u64
+      counterparty-name: string,
+      instrument-name: string,
+      amount: f64,
+      side: string,
+      r2: f64,
+      inception-price: f64,
+      ttm: f64,
+      iv: f64,
+      current-price: f64,
+      greeks: greeks,
+      pnl: f64,
+      pnl-percentage: f64,
+      last-updated: string,
+      expiration-date: string
+    }
+
+    record atm-risk-slide {
+      spot: f64,
+      greeks: greeks,
+      pnl: f64
+    }
+    record bumped-greeks {
+      spot: list<f64>,
+      delta: list<f64>,
+      gamma: list<f64>,
+      theta: list<f64>,
+      vega: list<f64>,
     }
   }
   
