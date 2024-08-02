@@ -1,6 +1,6 @@
 interface types {
 
-  use jabratech:common/types.{greeks};
+  use jabratech:common/types.{greeks, side};
     /**
      * Record representing a request to get trade list
      * - code: response code for validation
@@ -34,7 +34,7 @@ interface types {
       counterparty-name: string,
       instrument-name: string,
       amount: f64,
-      side: string,
+      side: side,
       r2: f64,
       inception-price: f64,
       ttm: f64,
