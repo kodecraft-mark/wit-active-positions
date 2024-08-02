@@ -1,6 +1,6 @@
 interface types {
 
-  use jabratech:common/types.{greeks}
+  use jabratech:common/types.{greeks};
     /**
      * Record representing a request to get trade list
      * - code: response code for validation
