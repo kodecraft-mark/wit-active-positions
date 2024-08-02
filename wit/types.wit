@@ -10,7 +10,7 @@ interface types {
     record active-positions-response {
       code: s16,
       message: string,
-      positions: list<active-position>
+      positions: list<active-position>,
       atm-risk-slide: atm-risk-slide,
       agg-bumped-greeks: list<bumped-greeks>
     }
