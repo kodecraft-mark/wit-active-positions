@@ -24,7 +24,8 @@ interface types {
      */
     record active-positions-request {
       user-email: string,
-      pairs: option<list<u8>>,
+      pair: u8,
+      spot: f64,
       party-a: u8,
       party-b: option<list<u8>>,
       bump: option<f64>
