@@ -12,7 +12,7 @@ interface types {
       message: string,
       positions: list<active-position>,
       atm-risk-slide: atm-risk-slide,
-      agg-bumped-greeks: list<bumped-greeks>
+      agg-bumped-greeks: table-data
     }
   
     /**
@@ -52,6 +52,13 @@ interface types {
       spot: f64,
       greeks: greeks,
       pnl: f64
+    }
+    record table-data {
+      data: list<table-row>
+    }
+    record table-row {
+      name: string,
+      values: list<f64>
     }
     record bumped-greeks {
       spot: list<f64>,
