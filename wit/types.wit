@@ -28,7 +28,10 @@ interface types {
       spot: f64,
       party-a: u8,
       party-b: option<list<u8>>,
-      bump: option<f64>
+      bump: option<f64>,
+      deribit-positions-delta: option<f64>,
+      jabra-deposits-delta: option<f64>,
+      exercise-and-interest-delta: option<f64>
     }
 
     record active-position {
