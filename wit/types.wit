@@ -32,6 +32,8 @@ interface types {
     }
 
     record active-position {
+      id: s64,
+      group-id: string,
       counterparty-name: string,
       instrument-name: string,
       amount: f64,
