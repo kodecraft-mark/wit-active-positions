@@ -12,7 +12,7 @@ interface types {
       message: string,
       positions: list<active-position>,
       atm-risk-slide: atm-risk-slide,
-      agg-bumped-greeks: table-data
+      agg-bumped-greeks: table-data,
     }
   
     /**
@@ -29,8 +29,7 @@ interface types {
       party-a: u8,
       party-b: option<list<u8>>,
       bump: option<f64>,
-      include-jabra-deposits:bool,
-      include-deribit-positions:bool
+      include-other-delta: bool
     }
 
     record active-position {
